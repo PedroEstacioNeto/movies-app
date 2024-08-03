@@ -1,5 +1,6 @@
 import { Movie } from "@/types";
 import StarRating from "../starRating";
+import './index.scss';
 
 export interface Props {
     movie: Movie
@@ -20,7 +21,7 @@ export default function MovieCard(props: Props) {
                     {props.movie.title}
                 </p>
                 
-                <StarRating rating={props.movie.vote_avarage} />
+                <StarRating rating={props.movie.vote_average} />
 
                 <div className="hidden-content">
                     <p className="description">

@@ -1,6 +1,7 @@
 import { Movie } from "@/types";
 import { FaStar } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa6";
+import './index.scss';
 
 export interface Props {
     rating: number
@@ -15,7 +16,6 @@ export default function StarRating(props: Props) {
 
     for(let i = 0; i < 5; i++) {
         if(i < numStars){
-            console.log('numStarts:'+numStars)
             fullStars.push(i)
         }else{
             emptyStars.push(i)
