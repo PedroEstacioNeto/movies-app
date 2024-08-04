@@ -17,17 +17,23 @@ export default function MovieCard(props: Props) {
             </div>
 
             <div className="movie-infos">
-                <p>
+                <p className="movie-title">
                     {props.movie.title}
                 </p>
-                
+
                 <StarRating rating={props.movie.vote_average} />
 
                 <div className="hidden-content">
-                    <p className="description">
-                        {props.movie.overview}
-                    </p>
+                    {props.movie.overview &&
+                        <p className="description">
+                            {props.movie.overview.length > 100
+                                ? `${props.movie.overview.substring(0, 100)}...`
+                                : props.movie.overview
+                            }
+                        </p>
+                    }
                 </div>
+                <button className="btn-default">Ver mais</button>
             </div>
 
         </li>
